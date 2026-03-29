@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio-2025114007-Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Pacifico&family=Google+Sans+Flex:wght@100..900&display=swap">
+
+</head>
+
+<body>
+
+    <header class="navbar" id="navbar">
+        <nav class="pages" id="pages">
+            <a href="home.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="for_mobile">
+            <button class="hamburger" id="hamburger" aria-label="Mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    <nav class="mobile_menu" id="mobile_menu">
+        <a href="home.html" class="active" onclick="close_mobile()">Home</a>
+        <a href="about.html" onclick="close_mobile()">About</a>
+        <a href="projects.html" onclick="close_mobile()">Projects</a>
+        <a href="contact.html" onclick="close_mobile()">Contact</a>
+    </nav>
+
+    <main class="padded">
+        <section class="fill">
+           <pre> <span class="intro">Hello!  Nice to meet you.  I'm</span> </pre>
+            <div class="name_home">
+                <span class="Yashaswi">YASHASWI</span>
+                <span class="Priya">PRIYA</span>
+            </div>
+            <div class="home_page_pic">
+                <img src="final_1st.png">
+            </div>
+            <div class="quote">
+                <p class="typed">
+                    <span class="typed_padding">
+                        <span id="cursor_text"></span>
+                       
+                    </span>
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="foot">
+        <div class="fade_to_view">
+        <div class="f_links" >
+
+            <a href="home.html" class="underlined">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        </div>
+    </footer>
+
+    <button aria-label="Light to Dark mode and vice versa" class="theme" id="theme">
+        <img src="sun.PNG" alt="light" id="sun">
+        <img src="moon.PNG" alt="dark" id="moon">
+    </button>
+    <script src="main.js"></script>
+</body>
+
+</html>
