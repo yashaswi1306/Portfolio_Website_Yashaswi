@@ -54,7 +54,7 @@ function type_change() {
         else
         {
             --j;
-            lines.slice(0,j);
+            lines(k.slice(0,j));
             if(j==0)
             {
                 i=(i+1)%quotes.length;
