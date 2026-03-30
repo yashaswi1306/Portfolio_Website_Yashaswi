@@ -14,14 +14,15 @@
 </head>
 
 <body>
-<!--  Navbar hidden in mibile view using @media. Replaced with hambrger for mobile view-->
+
+    <!-- Same as home.html. Navbar hidden in mibile view using @media. Replaced with hambrger for mobile view-->
     <!-- active used to underline the currently opened page -->
     <header class="navbar" id="navbar">
         <nav class="pages" id="pages">
-            <a href="home.html" class="active">Home</a>
+            <a href="home.html" >Home</a>
             <a href="about.html">About</a>
             <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
+            <a href="contact.html" class="active">Contact</a>
         </nav>
         <!-- Hamburger instead of navbar for mobile view. Opening it shows drop down of pages on mobile using mobile_menu id and open_mobile() in js -->
         <div class="for_mobile">
@@ -33,38 +34,18 @@
             </button>
         </div>
     </header>
-    <!--  Hamburger leads to dropdown of pages(.open class used) onclick calls close_mobile() (defined in main.js) to close dropdown. So if u click  home, it opens home.html WHILE closing dropdown menu-->
+    <!-- same as home.html. Hamburger leads to dropdown of pages(.open class used) onclick calls close_mobile() (defined in main.js) to close dropdown. So if u click  home, it opens home.html WHILE closing dropdown menu-->
     <nav class="mobile_menu" id="mobile_menu">
-        <a href="home.html" class="active" onclick="close_mobile()">Home</a>
+        <a href="home.html"  onclick="close_mobile()">Home</a>
         <a href="about.html" onclick="close_mobile()">About</a>
         <a href="projects.html" onclick="close_mobile()">Projects</a>
-        <a href="contact.html" onclick="close_mobile()">Contact</a>
+        <a href="contact.html" class="active" onclick="close_mobile()">Contact</a>
     </nav>
 
     <!-- MAIN -->
     <main class="padded">
-        <section class="fill">
-           <pre> <span class="intro">Hello!  Nice to meet you.  I'm</span> </pre>
-            <div class="name_home">
-                <span class="Yashaswi">YASHASWI</span>
-                <!-- First and last name in diff classes cuz I want an animation that has Yashaswi enter from left and Priya eter frim Right. -->
-                <span class="Priya">PRIYA</span>
-            </div>
-            <div class="home_page_pic">
-                <img src="final_1st.png">
-            </div>
-            <div class="quote">
-                <p class="typed">
-                    <!-- For Part B, typed omponent needss to be added. Addded in type_change() in main.js-->
-                    <span class="typed_padding">
-                        <span id="cursor_text"></span> 
-                        
-                       
-                    </span>
-                </p>
-            </div>
-
-        </section>
+        
+      
 
     </main>
 
