@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Pacifico&family=Google+Sans+Flex:wght@100..900&display=swap');
 
-/* where  tree line curso drop down */
+/*:root used as was specified in the proj. Root has theme as light by default. .dark has alternate vals  */
 
 :root {
     --bg: #f0f5fb;
@@ -12,8 +12,12 @@
     --font_head: 'Pacifico', cursive;
     --font_content: 'Google Sans Flex', 'Caveat', sans-serif;
     --font_typed: 'Caveat', 'Google Sans Flex', sans-serif;
+    --letter: url(light_1.png);
+    --img_about: url(about_light.png);
 
 }
+
+/* for theme change toggle */
 
 body.dark {
     --bg: #0a0a0a;
@@ -21,7 +25,8 @@ body.dark {
     --main: #e44474;
     --txt_small: #a08878;
     --border: #2a2020;
-
+    --letter: url(letter_dark.png);
+    --img_about: url(about_dark.png);
 }
 
 .navbar {
@@ -40,6 +45,7 @@ body.dark {
     justify-content: space-between;
     padding: 2.5rem 5%;
 }
+
 
 .for_mobile {
     display: flex;
@@ -240,6 +246,7 @@ body.dark {
     animation: a1 0.6s step-end infinite;
 }
 
+
 @keyframes a1 {
     from {
         opacity: 1;
@@ -254,6 +261,8 @@ body.dark {
     }
 }
 
+/* THis is irrelevant rn as I had to change the cursor and put it into js directly as then it was ot working for multiline texts as it kept jumping to the next logical newline instead of moving with the text */
+
 .name_home {
     position: absolute;
     left: 50%;
@@ -265,6 +274,7 @@ body.dark {
     display: flex;
     transform: translate(-50%, -50%);
 }
+/* name in home page */
 
 .Yashaswi {
     font-family: var(--font_head);
@@ -279,6 +289,8 @@ body.dark {
     opacity: 0.8;
     animation: left_slide 1s cubic-bezier(0.23, 1, 0.320, 1) both;
 }
+/* name in home page */
+
 
 .Priya {
     font-family: var(--font_head);
@@ -295,6 +307,8 @@ body.dark {
 
 
 }
+
+/* text slides into frame */
 
 @keyframes left_slide {
     from {
@@ -333,8 +347,8 @@ body.dark {
 .home_page_pic img {
     border: none;
     object-fit: cover;
-    width: clamp(16rem, 23vw, 28rem);
-    height: clamp(22rem, 32vw, 39rem);
+    width: clamp(16rem, 23vw, 50rem);
+    height: clamp(22rem, 32vw, 50rem);
     /* max-width: 320px; */
 }
 
@@ -343,7 +357,7 @@ body.dark {
     font-family: var(--font_typed);
     color: var(--txt_small);
     z-index: 10;
-    top: 2.5rem;
+    top: 5rem;
     font-size: clamp(1.5rem, 2.5vw, 2.5rem);
     left: 6%;
 }
@@ -359,7 +373,7 @@ body.dark {
     align-items: stretch;
     z-index: 2;
     width: 100%;
-    top: 55%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -397,7 +411,7 @@ body.dark {
     font-weight: bold;
 }
 
-
+/* preferred reduced motion case(neccessary sacc to assignment guidelines) */
 @media (prefers-reduced-motion: reduce) {
 
     *,
@@ -436,9 +450,13 @@ body.dark {
         display: flex;
     }
 }
-
+/* To make the display adjust acc to phone.For grid to stack for projects page also added here. So hamburger replaces the pages bar in phones, and vice versa */
 @media ( width<= 772px)
 {
+    .projects{
+        grid-template-columns: 1fr !important;
+    }
+
     .hamburger {
         display: flex;
     }
@@ -471,8 +489,18 @@ body{
     line-height: 1.5rem;
 }
 
+.contact_name{
+    font-family: var(--font_typed);
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--main);
+
+    display: flex;
+    align-items: center;
+}
+
 html{
-    font-size: 60%;
+    font-size: clamp(7px,1vw,11px);
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -481,4 +509,210 @@ html{
 {
     box-sizing: border-box;
     padding: 0%;
+}
+
+/* Contact and mssg_me incorrectly named as the same oarametrs have been used for projects.html and about.html too */
+
+.Contact{
+    font-family: var(--font_head);
+    display: block;
+    margin-top: 5rem;
+    text-align: center;
+    color: var(--main);
+    margin-bottom: 5rem;
+    font-size: clamp(3rem,6vw,8rem);
+}
+
+.mssg_me{
+    display: flex;
+    gap:4rem;
+    justify-content: center;
+    padding: 4rem 5%;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    background: var(--bg);
+}
+
+.box
+{
+    margin-bottom: 20px;
+    transition: border-color var(--transition);
+    border-color: solid var(--border);
+    padding: 10px;
+    border-bottom: 1px;
+}
+
+
+/* All of the next few tags all deal with the worfding inside the leetter. P seperated from (text area and input) in terms of formatting too */
+.format{
+   
+    display: flex;
+    gap: 10px;
+    align-items: center;
+     min-width: 15rem;
+    white-space: nowrap;
+    
+}
+
+.format input{
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text);
+    font-family: var(--font_typed);
+    font-size: 2.5rem;
+    transition: color var(--transition);
+}
+
+.format textarea{
+    border: none;
+    width: 100%;
+    outline: none;
+    background: transparent;
+    color: var(--text);
+    font-family: var(--font_typed);
+    font-size: 2.5rem;
+    padding: 1.5rem 2rem;
+     min-width: 12rem;
+
+}
+
+
+.format input{
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text);
+    font-family: var(--font_typed);
+    font-size: 2.5rem;
+    transition: color var(--transition);
+}
+
+
+.submitted{
+
+    text-align: center;
+    font-family: var(--font_content);
+    font-size: 2rem;
+    padding: 3rem;
+
+    color: var(--text);
+
+}
+
+.format p{
+    font-size: 2.5rem;
+   
+    font-family: var(--font_typed);
+    color: var(--txt_small);
+}
+
+/* Submission button */
+
+button.submit{
+    font-family: var(--font_content);
+    font-size: 2rem;
+    background-color: var(--main);
+    cursor: pointer;
+    font-weight: 700;
+    border: none;
+    color: #f0f5fb;
+    border-radius: 3rem;
+    padding: 1rem 2.5rem;
+    transition: background var(--transition);
+}
+
+/* has bg image as the letter image. Looked pretty in one of the ref protfolios I saw so i implemented it */
+
+#form{
+    background-image: var(--letter);
+    background-size: cover;
+    padding: 5rem;
+    width: 60%;
+    background-position: center;
+   border-radius: 1.5rem;
+   
+}
+
+/* Fpr teh projects page from here */
+
+.filters{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.fltr{
+    font-family: var(--font_content);
+    font-size: 2rem;
+    color: var(--txt_small);
+    cursor: pointer;
+    border: 3px solid var(--border);
+    border-radius: 2.5rem;
+    font-weight: 500;
+    padding: 0.5rem 2rem;
+    background: transparent;
+}
+
+.fltr:hover{
+    background-color: var(--main);
+    color: #f0f5fb;
+    border-color: var(--main);
+}
+
+
+.fltr.curr{
+    background-color: var(--main);
+    color: #f0f5fb;
+    border-color: var(--main);
+}
+
+
+.dscrptn{
+    font-family: var(--font_typed);
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: var(--text);
+}
+
+.project:hover{
+    border-color: var(--main);
+}
+
+.proj_name{
+    font-family: var(--font_content);
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--main);
+}
+.project a{
+    font-family: var(--font_content);
+    font-size: 1.5rem;
+    color: var(--main);
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+.projects{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:5rem ;
+    padding: 2rem 5%;
+}
+.project{
+    flex-direction: column;
+    display: flex;
+    border-radius: 2rem;
+    gap:1rem;
+    cursor:pointer;
+    padding: 2rem;
+    border: 3px solid var(--border);
+}
+
+
+.image_about{
+    content: var(--img_about);
 }

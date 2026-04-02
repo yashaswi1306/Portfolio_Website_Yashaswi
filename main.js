@@ -19,7 +19,8 @@ function both_themes(night) {
 
 function theme_change() {
     both_themes(localStorage.getItem('theme') === 'dark');
-    document.getElementById('theme')?.addEventListener('click', () => both_themes(!document.body.classList.contains('dark')));
+    const t=document.getElementById('theme');
+    t.addEventListener('click', () => both_themes(!document.body.classList.contains('dark')));
 }
 
 
@@ -106,8 +107,10 @@ function open_mobile(){
 }
 
 function close_mobile(){
-    document.getElementById('mobile_menu')?.classList.remove('open');
-    document.getElementById('hamburger')?.classList.remove('open');
+    const mm= document.getElementById('mobile_menu');
+    mm.classList.remove('open');
+    const hb=document.getElementById('hamburger');
+    hb.classList.remove('open');
 }
 window.close_mobile=close_mobile;
 document.addEventListener('DOMContentLoaded',() => {
@@ -116,3 +119,61 @@ document.addEventListener('DOMContentLoaded',() => {
     scroll_to_view();
     open_mobile();
 });
+
+
+
+// for project filters.
+
+
+function current(filter)
+{
+    const fltr= document.querySelectorAll('.fltr');
+    for (let i=0;i<fltr.length;i++)
+    {
+        fltr[i].classList.remove('curr');
+    }
+    filter.classList.add('curr');
+    
+}
+
+
+const fltrs= document.querySelectorAll('.fltr');
+for(let i=0;i<fltrs.length;i++)
+{
+    fltrs[i].addEventListener('click',function(){
+
+        const curr=this.dataset.fltr;
+        current(this);
+        filtering(curr);
+    });
+}
+
+
+function filtering(filter)
+{
+    const proj= document.querySelectorAll('.project');
+    for(let i=0;i<proj.length;i++)
+    {
+        const p0=proj[i];
+        const lan=p0.dataset.lang;
+        const list=lan.split(/\s+/);
+        if(filter==="all")
+        {
+            p0.style.display="";
+        }
+        else if(list.includes(filter))
+        {
+            p0.style.display="";
+        }
+        else
+        {
+            p0.style.display="none";
+
+        }
+
+    }
+}
+
+
+
+
