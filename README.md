@@ -12,9 +12,9 @@ Good luck, have fun!
 Yashaswi Priya
 2025114007
 
-Group A: A1
+Group A: A1: Issues: earlier commits didnt change url and didnt allow for multii-tag selection. If filter is all, it cleears all other filters, else, it clears the all and adds that filter. THe url changes based on teh example given un the assignment website. history.pushState updates the url.  const list = lan.split(/\s+/); splits teh data-lang into a list which can be iterated over.
 
-Group B: B1
+Group B: B1: Issues: earlier tried mking it multiline, but css cursor would not follow the letters. So used js component. But that wasnt allowed so let ot stay singleline. used js class as instructed. The i variable loops through the quotes list using the % operator while the j  variable loops through the letters of the words. The cursor is completely css. TH eblink function is set off by s1, and flag ios used to determine if logic should be typing or deleting. 
 
 3. Main font: 'Pacifico', the bubble letters matched a more fun and creative vibe. Similar to  lot of reference pctures I liked of people's portfolios. Makes the site seem less formal
    Content font: 'Google Sans Flex', contrasts the more informal bubbly font with a more sleek and polished method
