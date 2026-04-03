@@ -16,6 +16,15 @@ Group A: A1
 
 Group B: B1
 
+3. Main font: 'Pacifico', the bubble letters matched a more fun and creative vibe. Similar to  lot of reference pctures I liked of people's portfolios. Makes the site seem less formal
+   Content font: 'Google Sans Flex', contrasts the more informal bubbly font with a more sleek and polished method
+THat was the pairing, now a 3rd font used sparingly for a more informal scribbly vibe
+    Scribble font: 'Caveat'
+5.https://github.com/CS6201/assignment-2-yashaswi1306/tree/main/w3c
+
+6. https://github.com/CS6201/assignment-2-yashaswi1306/tree/main/lighthouse
+   
+7. https://github.com/CS6201/assignment-2-yashaswi1306/tree/main/light%20wcag
 
 8.https://github.com/CS6201/assignment-2-yashaswi1306/tree/main/dark%20wcag
 
