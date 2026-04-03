@@ -12,7 +12,7 @@ Good luck, have fun!
 Yashaswi Priya
 2025114007
 
-Group A: A1: Issues: earlier commits didnt change url and didnt allow for multii-tag selection. If filter is all, it cleears all other filters, else, it clears the all and adds that filter. THe url changes based on the example given in the assignment website. history.pushState updates the url.  const list = lan.split(/\s+/); splits the data-lang into a list which can be iterated over.
+2.Group A: A1: Issues: earlier commits didnt change url and didnt allow for multii-tag selection. If filter is all, it cleears all other filters, else, it clears the all and adds that filter. THe url changes based on the example given in the assignment website. history.pushState updates the url.  const list = lan.split(/\s+/); splits the data-lang into a list which can be iterated over.
 
 Group B: B1: Issues: earlier tried mking it multiline, but css cursor would not follow the letters. So used js component. But that wasnt allowed so let it stay singleline. used js class as instructed. The i variable loops through the quotes list using the % operator while the j  variable loops through the letters of the words. The cursor is completely css. THe blink function is set off by s1, and flag is used to determine if logic should be typing or deleting. 
 
