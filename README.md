@@ -24,7 +24,7 @@ Group B: B1: Issues: earlier tried mking it multiline, but css cursor would not 
 THat was the pairing, now a 3rd font is used sparingly for a more informal scribbly vibe
     Scribble font: 'Caveat'
 
-5. D3 has prefers reduced motion: compulsarily added. THis ensures that people with medical issues who can feel dizzy by the animations can also use the site without a problem.
+5. D3 has prefers reduced motion: compulsarily added. THis ensures that people with medical issues who can feel dizzy by the animations can also use the site without a problem. So, it overrides all other animations.
    THe hero entry sequence has my first name and last name enter and the  a hello. THis gives it a nice stage finish, like credits rolling into the frame. THe hello line also fades into frame for that effect.
    THe scroll trigerred section is used for the about timeline, the footer of the website as well as the projects. THis gives an anticipatory feeling to the site. THe theme button and timeline have microintercations. The theme button micro interaction matches the reason I wanted to use a custom jpg for the  icons, it gives a bubbly vibe to the page and matches my main font. The timeline microinteraction makes the event you hover on as your highlight, allowing all the focus to be drawn onto one event.
    
