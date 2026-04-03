@@ -3,9 +3,10 @@
 /*:root used as was specified in the proj. Root has theme as light by default. .dark has alternate vals  */
 
 :root {
+    /* colours */
     --bg: #f0f5fb;
     --text: #101820;
-    --main: #3a7bd5;
+    --main: #2560B8;
     --txt_small: #4a6080;
     --border: #c8d9ef;
     --transition: 0.2s ease;
@@ -13,8 +14,22 @@
     --font_content: 'Google Sans Flex', 'Caveat', sans-serif;
     --font_typed: 'Caveat', 'Google Sans Flex', sans-serif;
     --letter: url(light_1.png);
-    --img_about: url(about_light.png);
+    --img_about: url(images/pfp.jpg);
     --white: #f0f5fb;
+    
+    /* font size */
+    --small: 1.5rem;
+    --name: 16rem;
+    --font_main: 2.5rem;
+    --font_splment: 2rem;
+
+    /* gaps */
+    --space_large: 5rem;
+    --space_main: 2.5rem;
+    --space_sml: 1rem;
+    --space_mid:4rem;
+    
+
 }
 
 /* for theme change toggle */
@@ -26,7 +41,6 @@ body.dark {
     --txt_small: #a08878;
     --border: #2a2020;
     --letter: url(letter_dark.png);
-    --img_about: url(about_dark.png);
 }
 
 .navbar {
@@ -59,7 +73,7 @@ body.dark {
     display: flex;
     align-items: center;
     grid-area: 3.5rem;
-    gap: 2.5rem;
+    gap:var(--space_main);
     /* min-width: 40rem; */
 }
 
@@ -201,12 +215,6 @@ body.dark {
     transform: scale(1.5) rotate(20deg);
 }
 
-.theme svg {
-    align-items: center;
-    width: 5rem;
-    height: 5rem;
-}
-
 .padded {
     padding-top: 6rem;
     min-height: 100vh;
@@ -215,7 +223,7 @@ body.dark {
 .f_links {
     display: flex;
     justify-content: center;
-    gap: 2.5rem;
+    gap:var(--space_main);
     margin-bottom: 1rem;
     flex-wrap: wrap;
 }
@@ -231,7 +239,7 @@ body.dark {
 .f_links a {
     font-weight: 600;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: var(--small);
     transition: color var(--transition);
     color: var(--txt_small);
 }
@@ -242,9 +250,10 @@ body.dark {
 
 .cursor {
     color: var(--main);
-    font-size: 2.5rem;
-    animation: a1 0.6s step-end infinite;
-}
+    font-size: 3rem;
+    animation: a1 0.5s step-end infinite;
+} 
+
 
 
 @keyframes a1 {
@@ -261,7 +270,6 @@ body.dark {
     }
 }
 
-/* THis is irrelevant rn as I had to change the cursor and put it into js directly as then it was ot working for multiline texts as it kept jumping to the next logical newline instead of moving with the text */
 
 .name_home {
     position: absolute;
@@ -283,11 +291,11 @@ body.dark {
     display: block;
     text-align: left;
     line-height: 0.9;
-    font-size: clamp(7rem, 14vw, 16rem);
+    font-size: var(--name);
     padding-left: 2%;
     letter-spacing: -0.02em;
     opacity: 0.8;
-    animation: left_slide 1s cubic-bezier(0.23, 1, 0.320, 1) both;
+    animation: left_slide 1.5s cubic-bezier(0.23, 1, 0.320, 1) both;
 }
 /* name in home page */
 
@@ -299,12 +307,12 @@ body.dark {
     display: block;
     text-align: right;
     line-height: 0.9;
-    font-size: clamp(7rem, 14vw, 16rem);
+    font-size: var(--name);
     padding-right: 2%;
     letter-spacing: -0.02em;
     opacity: 0.8;
     animation: right_slide 1s cubic-bezier(0.23, 1, 0.320, 1) both;
-
+    animation-delay: 0.5s;
 
 }
 
@@ -347,19 +355,22 @@ body.dark {
 .home_page_pic img {
     border: none;
     object-fit: cover;
-    width: clamp(16rem, 23vw, 50rem);
-    height: clamp(22rem, 32vw, 50rem);
-    /* max-width: 320px; */
+    width: 40rem;
+    height: 50rem;
+   
 }
 
 .intro {
+    animation: left_slide 1s cubic-bezier(0.23, 1, 0.320, 1) both;
     position: relative;
     font-family: var(--font_typed);
     color: var(--txt_small);
     z-index: 10;
     top: 5rem;
-    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+    font-size: 2.5rem;
+    animation-delay: 1.25s;
     left: 6%;
+
 }
 
 .intro_left {
@@ -383,7 +394,7 @@ body.dark {
     align-items: flex-end;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 3rem;
+    gap: var(--space_main);
     padding-top: 50vh;
     padding-left: 2.5rem;
     margin-top: auto;
@@ -393,7 +404,7 @@ body.dark {
 
 .typed {
     font-family: var(--font_typed);
-    font-size: clamp(1.5rem, 2.5vw, 2.4rem);
+    font-size:4rem;
     color: var(--text);
     align-items: center;
     align-self: flex-start;
@@ -413,31 +424,37 @@ body.dark {
 }
 
 /* preferred reduced motion case(neccessary sacc to assignment guidelines) */
+/* used bu peiple who have medical conditions or motion sickness where a lot of fast animations can cause vomiting, headaches and other health issues */
 @media (prefers-reduced-motion: reduce) {
+    /* called if prefers reduced motion enabled */
 
     *,
     *::before,
     *::after {
-        animation-duration: 0.02ms !important;
-        transition-duration: 0.02ms !important;
+        animation-duration: 0s !important;  
+        transition-duration: 0s !important;
         animation-iteration-count: 1 !important;
+
+        /*!important makes sure that first preference is given to this reduced animation speed. */
     }
 
     .Yashaswi {
         animation: none !important;
-       
+       /* removes the sliding in of Yashaswi */
     }
     .Priya {
         animation: none !important;
-       
+       /* removes the sliding in of Priya */
     }
     .name_home{
          top: 55% !important;
         left: 50% !important;
         transform: translate(-50%, -50%) !important;
+        /* since animation not sliding in, this ensures correct formatting */
     }
     .mobile_menu.open{
          animation: none !important;
+         /* drop down menu animation removed.*/
     }
         
 }
@@ -456,7 +473,7 @@ body.dark {
 {
     .timeline_2{
         flex-direction: column;
-        gap:5rem;
+        gap:var(--space_large);
         align-items: center;
         
     }
@@ -478,15 +495,20 @@ body.dark {
         display:  none;
     }
     .Yashaswi{
-        font-size: clamp(5rem,20vw,10rem);
+        font-size: 6rem;
     }
     .Priya{
-        font-size: clamp(5rem,20vw,10rem);
+        font-size: 6rem;
     }
     .quote{
         flex-direction: column;
         gap: 1.8rem;
         padding-top: 65vh;
+    }
+    .home_page_pic img
+    {
+        width: 20rem;
+        height: 25rem;
     }
 }
 
@@ -496,11 +518,11 @@ img{
 }
 body{
     font-family: var(--font_content);
-    font-size: 1.5rem;
+    font-size: var(--small);
     background-color: var(--bg);
     color: var(--text);
     transition: background-color var(--transition), color var(--transition);
-    line-height: 1.5rem;
+    line-height: var(--small);
 }
 
 .contact_name{
@@ -514,7 +536,7 @@ body{
 }
 
 html{
-    font-size: clamp(7px,1vw,11px);
+    font-size: 11px;
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -534,7 +556,7 @@ html{
     text-align: center;
     color: var(--main);
     margin-bottom: 5rem;
-    font-size: clamp(3rem,6vw,8rem);
+    font-size:8rem;
 }
 
 .mssg_me{
@@ -565,13 +587,15 @@ html{
     gap: 10px;
     align-items: center;
      min-width: 15rem;
+     flex-wrap: wrap;
     white-space: nowrap;
+    
     
 }
 
 .format input{
     border: none;
-    outline: none;
+    /* outline: none; */
     background: transparent;
     color: var(--text);
     font-family: var(--font_typed);
@@ -582,12 +606,12 @@ html{
 .format textarea{
     border: none;
     width: 100%;
-    outline: none;
+    /* outline: none; */
     background: transparent;
     color: var(--text);
     font-family: var(--font_typed);
     font-size: 2.5rem;
-    padding: 1.5rem 2rem;
+    padding: var(--small) 2rem;
      min-width: 12rem;
 
 }
@@ -595,7 +619,7 @@ html{
 
 .format input{
     border: none;
-    outline: none;
+    /* outline: none; */
     background: transparent;
     color: var(--text);
     font-family: var(--font_typed);
@@ -645,7 +669,7 @@ button.submit{
     padding: 5rem;
     width: 60%;
     background-position: center;
-   border-radius: 1.5rem;
+   border-radius: var(--small);
    
 }
 
@@ -655,7 +679,7 @@ button.submit{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap:var(--space_sml);
 }
 
 .fltr{
@@ -705,7 +729,7 @@ button.submit{
 }
 .project a{
     font-family: var(--font_content);
-    font-size: 1.5rem;
+    font-size: var(--small);
     color: var(--main);
     text-decoration: none;
     font-weight: 500;
@@ -715,19 +739,22 @@ button.submit{
 .projects{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    gap:5rem ;
+    gap:var(--space_large) ;
     padding: 2rem 5%;
 }
 .project{
     flex-direction: column;
     display: flex;
     border-radius: 2rem;
-    gap:1rem;
+    gap:var(--space_sml);
     cursor:pointer;
     padding: 2rem;
     border: 3px solid var(--border);
 }
 
+.project.wide{
+    grid-column: span 2;
+}
 
 .image_about{
     content: var(--img_about);
@@ -784,7 +811,7 @@ button.submit{
 .details p{
     font-family: var(--font_content);
     color: var(--text);
-    font-size: 1.5rem;
+    font-size: var(--small);
     margin-top: 2.5rem;
     line-height: 2.5rem;
     font-weight: 400;
@@ -830,4 +857,12 @@ button.submit{
     border-top: 2px solid var(--main);
     position: absolute;
     width: 100%;
+}
+
+.invalid_format
+{
+    color: var(--main);
+    font-style: var(--font_content);
+    font-size: 2rem;
+    text-align: center;
 }

@@ -45,7 +45,7 @@
         <div class="mssg_me">
         <span class="Contact">Projects</span>
         <div class="filters">
-            <button class="fltr curr" data-fltr="all">All</button>
+            <button class="fltr curr" data-fltr="all" aria-current="true">All</button>
             <button class="fltr" data-fltr="python">Python</button>
             <button class="fltr" data-fltr="html">HTML</button>
             <button class="fltr" data-fltr="css">CSS</button>
@@ -55,41 +55,47 @@
         </div>
 <div class="fade_to_view">
         <div class="projects" id="projects">
-            <div class="project" data-lang="python">
+            <div class="project grid" data-lang="python">
                 <span class="proj_name">Toy Morph Analyzer and Generator</span>
-                <a href=""></a>
+                <!-- <a href=""></a> -->
                 <p class="dscrptn">Toy Morph analyzer. Has one for Indian languages (Hindi in my case), and one for English. UNicode converter from Roman to devanagiri also added.  Made it for CL1 Assignment. What I would have done differently: Used different parameters for the analyzer. As it's a toy analyzer, I needed to make it work for only one parameter. However, as the paradigm I used had a lot of excvptions, especially in Hindi, my model is a lot more dictionary based than regex based.</p>
             </div>
 
-             <div class="project" data-lang="python">
+             <div class="project grid" data-lang="python">
                 <span class="proj_name">Manually Annotated Dataset for English and Hindi</span>
-                <a href=""></a>
+                <!-- <a href=""></a> -->
                 <p class="dscrptn">Upwards of 2500 tokens with POS tagging, Chunking and NER for the corpus. Can be used to train llms. Has confusion matrix of the accuracy of this dataset at training llms at annotation. Has around an 86% accuracy rate.  Made it for CL1 Assignment. What I would have done differently: Used a better tokenizer and normalizer. Cleaning took up way too much time.Python used for generalizing the tags, then manually fixed all the annotations.</p>
             </div>
 
-            <div class="project" data-lang="python">
+            <div class="project grid" data-lang="python">
                 <span class="proj_name">Toy Tokenizer and Normalizer</span>
-                <a href=""></a>
-                <p class="dscrptn">Toy tokenizer and normalizer for Hindiand English.  Made it for CL1 Assignment. What I would have done fdifferently: NOt used whitespace tokenization for HIndi. Innacurate as it simply breaks an agglutinative language into words and NOT tokens.</p>
+                <!-- <a href=""></a> -->
+                <p class="dscrptn">Toy tokenizer and normalizer for Hindi and English.  Made it for CL1 Assignment. What I would have done fdifferently: NOt used whitespace tokenization for HIndi. Innacurate as it simply breaks an agglutinative language into words and NOT tokens.</p>
             </div>
 
-            <div class="project" data-lang="html css js">
+            <div class="project grid" data-lang="html css js">
                 <span class="proj_name">Portfolio</span>
                 <a href="https://github.com/CS6201/assignment-2-yashaswi1306">View</a>
                 <p class="dscrptn">Personal Portfolio Website. Made it for ISS Assignment 2. What I would have done differently: REgularly pushed my code. Laptop crased in between and had to redo half of the project.</p>
             </div>
 
-            <div class="project" data-lang="c">
+            <div class="project grid" data-lang="c">
                 <span class="proj_name">Twixt Game</span>
                 <a href="https://github.com/cpro-iiit/course-project-phase-2-yashu1306-boop">View</a>
         
                 <p class="dscrptn">Playable Twixt Game with working Win state. Made it for Cpro Assignment. What I would have done differently: Should've used structs and not a text file to save game state and board. File handling reduced coding complexity, but made the code inefficient.</p>
             </div>
 
-            <div class="project" data-lang="c">
+            <div class="project grid" data-lang="c">
                 <span class="proj_name">Mock Spotify</span>
                 <!-- <a href="https://github.com/cpro-iiit/course-project-phase-2-yashu1306-boop">View</a> -->
                 <p class="dscrptn">Mock spotify to hold songs, playlist , albums with a log file. Made it for Cpro Assignment. What I would have done differently: UNderstood project guidelines better before implementation. Had to change most of my parameters in the last minute as I had a uindamental misunderstanding of the project parameters.</p>
+            </div>
+
+            <div class="project grid" data-lang=" ">
+                <span class="proj_name">Linguistic Analysis of Maithili</span>
+                <a href="https://github.com/yashaswi1306/ITL1_IIITH_Sem1/tree/main/CourseProject"></a>
+                <p class="dscrptn">A linguistic analysis of Maithili (phonological,morphological and syntactical analysis).  Made it for IT1 Project. What I would have done differently: Chosen a different audio for the same. Firstly, the audio was not clear enough and secondly, it didn't have enough codemixing, which is a staple of modern Maithili</p>
             </div>
 
     

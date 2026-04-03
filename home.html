@@ -41,28 +41,30 @@
 
     <!-- MAIN -->
     <main class="padded">
-        <section class="fill">
-           <pre> <span class="intro">Hello!  Nice to meet you.  I'm</span> </pre>
+        <div class="fill">
+           <pre> <span class="intro" >Hello!  Nice to meet you.  I'm</span> </pre>
             <div class="name_home">
                 <span class="Yashaswi">YASHASWI</span>
                 <!-- First and last name in diff classes cuz I want an animation that has Yashaswi enter from left and Priya eter frim Right. -->
                 <span class="Priya">PRIYA</span>
             </div>
             <div class="home_page_pic">
-                <img src="final_1st.PNG">
+                <img src="final_1st.PNG" alt="Hello! I'm Yashaswi">
             </div>
             <div class="quote">
                 <p class="typed">
                     <!-- For Part B, typed omponent needss to be added. Addded in type_change() in main.js-->
-                    <span class="typed_padding">
-                        <span id="cursor_text"></span> 
+                    <span class="typed_padding" >
+                        <span id="cursor_text" aria-live="off"></span> 
+                        <span class="cursor" aria-hidden="true">|</span> 
+
                         
-                       
+                       <!-- off as no need to announce this as typed quote isnt very imp for the page -->
                     </span>
                 </p>
             </div>
 
-        </section>
+        </div>
 
     </main>
 
