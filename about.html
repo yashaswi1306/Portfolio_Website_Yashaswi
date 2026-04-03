@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio-2025114007-Home</title>
+    <title>Portfolio-2025114007-About</title>
     <link rel="stylesheet" href="styles.css">
     <!-- linking the css stylesheet -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Pacifico&family=Google+Sans+Flex:wght@100..900&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Pacifico&family=Google+Sans+Flex:wght@100..900&display=swap">
     <!-- Google fonts used. Need for each font(explain typography: explained in Readme) -->
 </head>
 
@@ -17,10 +18,10 @@
     <!-- active used to underline the currently opened page -->
     <header class="navbar" id="navbar">
         <nav class="pages" id="pages">
-            <a href="home.html" >Home</a>
+            <a href="home.html">Home</a>
             <a href="about.html" class="active">About</a>
             <a href="projects.html">Projects</a>
-            <a href="contact.html" >Contact</a>
+            <a href="contact.html">Contact</a>
         </nav>
         <!-- Hamburger instead of navbar for mobile view. Opening it shows drop down of pages on mobile using mobile_menu id and open_mobile() in js -->
         <div class="for_mobile">
@@ -34,33 +35,111 @@
     </header>
     <!-- same as home.html. Hamburger leads to dropdown of pages(.open class used) onclick calls close_mobile() (defined in main.js) to close dropdown. So if u click  home, it opens home.html WHILE closing dropdown menu-->
     <nav class="mobile_menu" id="mobile_menu">
-        <a href="home.html"  onclick="close_mobile()">Home</a>
+        <a href="home.html" onclick="close_mobile()">Home</a>
         <a href="about.html" class="active" onclick="close_mobile()">About</a>
         <a href="projects.html" onclick="close_mobile()">Projects</a>
         <a href="contact.html" onclick="close_mobile()">Contact</a>
     </nav>
 
     <!-- MAIN -->
+    <!-- about me para -->
+
     <main class="padded">
-        
-            <div class="image_about">
-                <img alt="Hello! I'm Yashaswi">
+        <div class="mssg_me">
+
+            <div class="about">
+                <div class="image_about">
+                    <img alt="Hello! I'm Yashaswi">
+                </div>
+                <div class="stuff_about"><span class="Contact">About Me</span>
+                    <p class="about_me">Hello! I'm Yashaswi Priya. I am a first year Dual Degree student studying
+                        Computer Science at IIIT Hyderabad. I wanted to get into engineering, less due to a love for
+                        coding and more so for my love of mathematics. More so than the coding aspect, I like getting
+                        into the 'saar' of a question, figuring out what connection can be made between seemingly
+                        unrelated entities and how mathematical models can be implemented for the same. I opted for CLD
+                        as my top preference, because I was simply fascinated by what they were doing here at IIITH in
+                        the field of computational linguistics. I remember researching about the IIITH labs and always
+                        circling back to how cool LTRC was. I spent most of my vacation reading articles and watching
+                        videos to learn more about linguistics and cl, as I had very
+                        little prior knowledge of the same. And now that I'm here, I am really glad I chose this as my
+                        course.
+                        I'm a classically trained Bharatnatyam dancer, which has taught me discipline and perseverance.
+                        I enjoy reading books (mostly modern-classics or crime thrillers) and painting in my free time.
+                        I am a huge animal lover and absolutely adore dogs, especially the campus canines.</p>
+                </div>
             </div>
-            <div class="stuff_about"></div>
-        
+            <br><br><br>
+            <div class="fade_to_view">
+                <span class="Contact">Timeline</span>
+            </div>
+        </div>
+
+        <!-- interactive timeline -->
+
+        <div class="fade_to_view">
+            <div class="timeline_2">
+                <hr class="line">
+                <div class="event">
+                    <div class="pointer"></div>
+                    <div class="details">
+                        2007
+                        <p>Born on 13th June 2007</p>
+                    </div>
+                </div>
+                <div class="event">
+                    <div class="pointer"></div>
+                    <div class="details">
+                        2012
+                        <p>Started Learning Bharatnatyam</p>
+                    </div>
+                </div>
+                <div class="event">
+                    <div class="pointer"></div>
+                    <div class="details">
+                        2014
+                        <p>Shifted from Bihar to Bomabay</p>
+                    </div>
+                </div>
+                <div class="event">
+                    <div class="pointer"></div>
+                    <div class="details">
+                        2023
+                        <p>Completed 10th from Podar International School,Powai</p>
+                    </div>
+                </div>
+
+                <div class="event">
+                    <div class="pointer"></div>
+                    <div class="details">
+                        2023-25
+                        <p>JEE Prep from FIITJEE Thane</p>
+                    </div>
+                </div>
+
+                <div class="event">
+                    <div class="pointer"></div>
+                    <div class="details">
+                        2025
+                        <p>Got CLD at IIITH</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
     </main>
 
 
     <!-- same as home.html. Since PART A 1 asked for a scroll - triggered section, scroll_to_view() in main.js enables fade_to_view which has opacity as 0% while in_voew when enabled puts opacity to 100% -->
     <footer class="foot">
         <div class="fade_to_view">
-        <div class="f_links" >
+            <div class="f_links">
 
-            <a href="home.html" >Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-        </div>
+                <a href="home.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </div>
         </div>
     </footer>
     <!-- #moon is hidden by default. So u see moon image (moon.png) clicking which leads to dark mode. This enables #moon as block and puts#sun to none. So it shows sun.png and hides moon.png.

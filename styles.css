@@ -14,7 +14,7 @@
     --font_typed: 'Caveat', 'Google Sans Flex', sans-serif;
     --letter: url(light_1.png);
     --img_about: url(about_light.png);
-
+    --white: #f0f5fb;
 }
 
 /* for theme change toggle */
@@ -382,7 +382,7 @@ body.dark {
     position: relative;
     align-items: flex-end;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 3rem;
     padding-top: 50vh;
     padding-left: 2.5rem;
@@ -396,6 +396,7 @@ body.dark {
     font-size: clamp(1.5rem, 2.5vw, 2.4rem);
     color: var(--text);
     align-items: center;
+    align-self: flex-start;
     display: flex;
     gap: 0.5rem;
 }
@@ -453,6 +454,19 @@ body.dark {
 /* To make the display adjust acc to phone.For grid to stack for projects page also added here. So hamburger replaces the pages bar in phones, and vice versa */
 @media ( width<= 772px)
 {
+    .timeline_2{
+        flex-direction: column;
+        gap:5rem;
+        align-items: center;
+        
+    }
+    .line{
+        display: none;
+    }
+    .event{
+        margin: 0;
+        width: 100%;
+    }
     .projects{
         grid-template-columns: 1fr !important;
     }
@@ -617,7 +631,7 @@ button.submit{
     cursor: pointer;
     font-weight: 700;
     border: none;
-    color: #f0f5fb;
+    color: var(--white);
     border-radius: 3rem;
     padding: 1rem 2.5rem;
     transition: background var(--transition);
@@ -658,22 +672,23 @@ button.submit{
 
 .fltr:hover{
     background-color: var(--main);
-    color: #f0f5fb;
+    color: var(--white);
     border-color: var(--main);
 }
 
 
 .fltr.curr{
     background-color: var(--main);
-    color: #f0f5fb;
+    color: var(--white);
     border-color: var(--main);
 }
 
 
 .dscrptn{
-    font-family: var(--font_typed);
-    font-size: 1.5rem;
+    font-family: var(--font_content);
+    font-size: 2rem;
     font-weight: 200;
+    line-height: 2.5rem;
     color: var(--text);
 }
 
@@ -684,7 +699,8 @@ button.submit{
 .proj_name{
     font-family: var(--font_content);
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    line-height: 2.7rem;
     color: var(--main);
 }
 .project a{
@@ -715,4 +731,104 @@ button.submit{
 
 .image_about{
     content: var(--img_about);
+    width: 30%;
+    margin-top: 6rem;
+    align-items: left;
+}
+
+.stuff_about{
+    font-family: var(--font_content);
+    /* margin-top: 5rem; */
+    color: var(--text);
+    font-weight: 200;
+    font-size: 2rem;
+    line-height: 3.5rem;
+    flex-direction: column;
+    display: flex;
+}
+
+/* .event:hover .pointer{
+    transform: scale(1.5);
+} */
+.about{
+    display: flex;
+    gap:4rem;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
+    border-radius: 10px;
+    background: var(--bg);
+
+}
+
+.details{
+    font-family: var(--font_typed);
+    color: var(--main);
+    font-size: 3.5rem;
+    text-align: center;
+    margin-top: 4rem;
+    line-height: 2.5rem;
+    width: 20rem;
+    height: 20rem;
+    padding: 2rem 2rem;
+    border: 2px solid var(--main);
+    cursor: pointer;
+    transition: background var(--transition), color var(--transition);
+    border-radius: 50%;
+    display: flex;
+    font-weight: bolder;
+    flex-direction: column;
+    align-items: center;
+}
+
+.details p{
+    font-family: var(--font_content);
+    color: var(--text);
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    line-height: 2.5rem;
+    
+    font-weight: 400;
+}
+
+.event:hover .details{
+    background: var(--main);
+    transition: var(--transition);
+    color:var(--white);
+    transform: scale(1.2);
+}
+
+.timeline_2{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    padding: 5rem 3%;
+}
+
+.event{
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    align-items: center;
+  
+    position: relative;
+}
+
+.pointer{
+    border-radius: 50%;
+    background-color: var(--main);
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: var(--transition);
+    outline: 3px solid var(--main);
+    border: 3px solid var(--bg);
+}
+
+.line{
+    border: none;
+    border-top: 2px solid var(--main);
+    position: absolute;
+    width: 100%;
 }
