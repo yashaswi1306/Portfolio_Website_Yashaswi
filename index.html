@@ -1,1 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio-2025114007-Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- linking the css stylesheet -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Pacifico&family=Google+Sans+Flex:wght@100..900&display=swap">
+    <!-- Google fonts used. Need for each font(explain typography: explained in Readme) -->
+</head>
+
+<body>
+<!--  Navbar hidden in mibile view using @media. Replaced with hambrger for mobile view-->
+    <!-- active used to underline the currently opened page -->
+    <header class="navbar" id="navbar">
+        <nav class="pages" id="pages">
+            <a href="home.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <!-- Hamburger instead of navbar for mobile view. Opening it shows drop down of pages on mobile using mobile_menu id and open_mobile() in js -->
+        <div class="for_mobile">
+            <button class="hamburger" id="hamburger" aria-label="Mobile menu">
+                <!-- for the dropdown menu for mobile ease -->
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    <!--  Hamburger leads to dropdown of pages(.open class used) onclick calls close_mobile() (defined in main.js) to close dropdown. So if u click  home, it opens home.html WHILE closing dropdown menu-->
+    <nav class="mobile_menu" id="mobile_menu">
+        <a href="home.html" class="active" onclick="close_mobile()">Home</a>
+        <a href="about.html" onclick="close_mobile()">About</a>
+        <a href="projects.html" onclick="close_mobile()">Projects</a>
+        <a href="contact.html" onclick="close_mobile()">Contact</a>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="padded">
+        <div class="fill">
+           <pre> <span class="intro" >Hello!  Nice to meet you.  I'm</span> </pre>
+            <div class="name_home">
+                <span class="Yashaswi">YASHASWI</span>
+                <!-- First and last name in diff classes cuz I want an animation that has Yashaswi enter from left and Priya eter frim Right. -->
+                <span class="Priya">PRIYA</span>
+            </div>
+            <div class="home_page_pic">
+                <img src="final_1st.PNG" alt="Hello! I'm Yashaswi">
+            </div>
+            <div class="quote">
+                <p class="typed">
+                    <!-- For Part B, typed omponent needss to be added. Addded in type_change() in main.js-->
+                    <span class="typed_padding" >
+                        <span id="cursor_text" aria-live="off"></span> 
+                        <span class="cursor" aria-hidden="true">|</span> 
+
+                        
+                       <!-- off as no need to announce this as typed quote isnt very imp for the page -->
+                    </span>
+                </p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- same as home.html. Since PART A 1 asked for a scroll - triggered section, scroll_to_view() in main.js enables fade_to_view which has opacity as 0% while in_voew when enabled puts opacity to 100% -->
+    <footer class="foot">
+        <div class="fade_to_view">
+        <div class="f_links" >
+
+            <a href="home.html" >Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        </div>
+    </footer>
+    <!-- #moon is hidden by default. So u see moon image (moon.png) clicking which leads to dark mode. This enables #moon as block and puts#sun to none. So it shows sun.png and hides moon.png.
+    :root has var for light mode. theme_change() enables ,dark which ha alternate var for night mode-->
+    <button aria-label="Light to Dark mode and vice versa" class="theme" id="theme">
+        <img src="sun.PNG" alt="light" id="sun">
+        <img src="moon.PNG" alt="dark" id="moon">
+    </button>
+    <!-- for all animations, main.js used (theme toggle, hamburger dropdow, scrolling, typed text) -->
+    <script src="main.js"></script>
+</body>
+
+</html>
