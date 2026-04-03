@@ -785,9 +785,8 @@ button.submit{
     font-family: var(--font_content);
     color: var(--text);
     font-size: 1.5rem;
-    margin-top: 3rem;
+    margin-top: 2.5rem;
     line-height: 2.5rem;
-    
     font-weight: 400;
 }
 
