@@ -20,6 +20,11 @@ Group B: B1
    Content font: 'Google Sans Flex', contrasts the more informal bubbly font with a more sleek and polished method
 THat was the pairing, now a 3rd font used sparingly for a more informal scribbly vibe
     Scribble font: 'Caveat'
+
+4. D3 has prefers reduced motion: compulsarily added. THis ensures that people with medical issues whi can feel dizzy by the animations can also use the site without a problem.
+   THe hero entry sequence has my first name and last name ener and the  a hello. THis gives it a nice stage finish, like credits rolling into the frame. THe hello line also fades into frame for that effect.
+   THe scroll trigerred section is used for the about timeline, the footer of the website as well as the projects. THis gives an anticipatory feeling to the site. THe theme button and timeline have microintercations. The theme button micro interaction matchss the reason I wanted to use a custom jpg for the  icons, it gives a bubbly vibe to the page and matches my main font. The timeline microinteraction makes the event yoou hover on as your highlight, allowing all the focus to be drawn onto one event.
+   
 5.https://github.com/CS6201/assignment-2-yashaswi1306/tree/main/w3c
 
 6. https://github.com/CS6201/assignment-2-yashaswi1306/tree/main/lighthouse
