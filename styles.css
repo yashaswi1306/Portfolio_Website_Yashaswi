@@ -607,24 +607,25 @@ html{
 
 .format input{
     border: none;
-    /* outline: none; */
+    outline: none;
     background: transparent;
     color: var(--text);
     font-family: var(--font_typed);
     font-size: 2.5rem;
     transition: color var(--transition);
+    width: 70%
 }
 
 .format textarea{
     border: none;
     width: 100%;
-    /* outline: none; */
+    outline: none;
     background: transparent;
     color: var(--text);
     font-family: var(--font_typed);
     font-size: 2.5rem;
     padding: var(--small) 2rem;
-     min-width: 12rem;
+    min-width: 12rem;
 
 }
 
