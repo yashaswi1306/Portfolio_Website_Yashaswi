@@ -78,7 +78,7 @@ function blink() {
     }
 }
 
-new type_text(quoted,{quotes : ["I have no special talent...","I'm only passionately curious.", "Learn from yesterday...","Live for today...","Hope for tomorrow."],
+new type_text(quoted,{quotes : ["Learn from yesterday...","Live for today...","Hope for tomorrow."],
  letterspeed : 80,
  delspeed : 35,
  duration : 1500}).s1();
@@ -261,9 +261,26 @@ function form() {
             return;
         }
 
+        emailjs.init("7WWUKHdug9r0PnPWm");
+      
 
-        document.querySelector('.mssg_me').innerHTML =
+        emailjs.send("service_lo902x4","template_ipvof4i",
+            {
+                from_email: from.value,
+                subject: sub.value,
+                message: mssg.value
+            }
+    )
+
+    .then(function(){
+          document.querySelector('.mssg_me').innerHTML =
             '<p class="Contact">Message Sent!</p>'
+    })
+
+    .catch(function(error){
+        document.querySelector('.mssg_me').innerHTML =
+            '<p class="Contact">Something Went Wrong! Please try again.</p>'
+    });
     });
 
 }

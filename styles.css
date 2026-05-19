@@ -19,7 +19,7 @@
     
     /* font size */
     --small: 1.5rem;
-    --name: 16rem;
+    --name: clamp(6rem,12vw,16rem);
     --font_main: 2.5rem;
     --font_splment: 2rem;
 
@@ -280,6 +280,7 @@ body.dark {
     flex-direction: column;
     align-items: stretch;
     display: flex;
+    /* margin-top: 20px; */
     transform: translate(-50%, -50%);
 }
 /* name in home page */
@@ -346,7 +347,7 @@ body.dark {
 
 .home_page_pic {
     position: absolute;
-    top: 66%;
+    top: 70%;
     left: 46%;
     transform: translate(-50%, -52%);
     z-index: 5;
@@ -355,9 +356,8 @@ body.dark {
 .home_page_pic img {
     border: none;
     object-fit: cover;
-    width: 40rem;
-    height: 50rem;
-   
+    width: clamp(25rem,35vh,40rem);
+    height: clamp(30rem,45vh,50rem);
 }
 
 .intro {
@@ -366,10 +366,10 @@ body.dark {
     font-family: var(--font_typed);
     color: var(--txt_small);
     z-index: 10;
-    top: 5rem;
-    font-size: 2.5rem;
+    top: 2rem;
+    font-size: clamp(1.8rem,2vw,2.5rem);
     animation-delay: 1.25s;
-    left: 6%;
+    left: 5%;
 
 }
 
@@ -384,8 +384,10 @@ body.dark {
     align-items: stretch;
     z-index: 2;
     width: 100%;
-    top: 45%;
+    top: 50%;
     left: 50%;
+    margin-top: 20px;
+    /* padding: 0 1%; */
     transform: translate(-50%, -50%);
 }
 
@@ -395,7 +397,7 @@ body.dark {
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: var(--space_main);
-    padding-top: 50vh;
+    padding-top: clamp(45vh,52vh,60vh);
     padding-left: 2.5rem;
     margin-top: auto;
     z-index: 10;
@@ -404,7 +406,7 @@ body.dark {
 
 .typed {
     font-family: var(--font_typed);
-    font-size:4rem;
+    font-size:clamp(2.5rem,3vh,4rem);
     color: var(--text);
     align-items: center;
     align-self: flex-start;
@@ -556,6 +558,16 @@ html{
     text-align: center;
     color: var(--main);
     margin-bottom: 5rem;
+    font-size:8rem;
+}
+
+.Timeline{
+    font-family: var(--font_head);
+    display: block;
+    margin-top: 5rem;
+    text-align: center;
+    color: var(--main);
+    margin-bottom: 0.1rem;
     font-size:8rem;
 }
 
@@ -791,13 +803,13 @@ button.submit{
 .details{
     font-family: var(--font_typed);
     color: var(--main);
-    font-size: 3.5rem;
+    font-size: clamp(2.5rem,3vw,3.5rem);
     text-align: center;
     margin-top: 4rem;
-    line-height: 2.5rem;
-    width: 20rem;
-    height: 20rem;
-    padding: 2rem 2rem;
+    line-height: 2rem;
+    width: clamp(15rem,16vw,22rem);
+    height: clamp(15rem,16vw,22rem);
+    padding: 1.5rem;
     border: 2px solid var(--main);
     cursor: pointer;
     transition: background var(--transition), color var(--transition);
@@ -811,9 +823,9 @@ button.submit{
 .details p{
     font-family: var(--font_content);
     color: var(--text);
-    font-size: var(--small);
-    margin-top: 2.5rem;
-    line-height: 2.5rem;
+    font-size: clamp(1.2rem,1.3vw,1.5rem);
+    margin-top: 1.5rem;
+    line-height: 2rem;
     font-weight: 400;
 }
 
@@ -824,7 +836,9 @@ button.submit{
     transform: scale(1.2);
 }
 
+
 .timeline_2{
+    min-height: 80vh;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -837,7 +851,8 @@ button.submit{
     flex:1;
     flex-direction: column;
     align-items: center;
-  
+    min-width: 0;
+    padding: 0 1%;
     position: relative;
 }
 
