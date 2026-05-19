@@ -37,3 +37,7 @@ That was the pairing, now a 3rd font is used sparingly for a more informal scrib
 8.https://github.com/CS6201/assignment-2-yashaswi1306/tree/main/dark%20wcag
 
 9.URL:  https://researchweb.iiit.ac.in/~yashaswi.priya/
+
+
+
+LEFT: ADD LINKEDIN AND GIT USERNAMES TO CONATCT FORM.

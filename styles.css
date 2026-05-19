@@ -527,11 +527,23 @@ body{
     line-height: var(--small);
 }
 
+
+
 .contact_name{
     font-family: var(--font_typed);
     font-size: 3rem;
     font-weight: 600;
     color: var(--main);
+
+    display: flex;
+    align-items: center;
+}
+
+.contact_email{
+    font-family: var(--font_typed);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--txt_small);
 
     display: flex;
     align-items: center;
