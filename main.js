@@ -228,6 +228,9 @@ function filtering(filter) {
     }
 }
 
+
+let flag2=false;
+
 //for the form filling (added last didnt know that tehre needed to be a check to ensure only valid emails can be sent)
 
 function form() {
@@ -243,11 +246,16 @@ function form() {
 
         let flag = false;
         function invalid(input) {
-            const flgd = document.createElement('div');
-            flgd.className = 'invalid_format';
-            flgd.textContent = "You haven't filled the form correctly. Kindly ensure all fields are filled correctly."
-            input.parentElement.appendChild(flgd);
-            flag = true;
+            flag=true;
+            if(!flag2)
+            {
+                const flgd = document.createElement('div');
+                flgd.className = 'invalid_format';
+                flgd.style="font-size: 15px;"
+                flgd.textContent = "You haven't filled the form correctly. Kindly ensure all fields are filled correctly."
+                input.parentElement.appendChild(flgd);
+            }
+            flag2 = true;
         }
 
         if ((!/^[a-zA-Z0-9_.]+@[a-z]+\.[a-z]{2,}$/.test(from.value)))
